@@ -181,7 +181,7 @@ class BracketHighlighterDocCommand(sublime_plugin.WindowCommand):
 			if has_phantom_support:
 				mdpopups.add_phantom(
 					view,
-					'quickstart',
+					'QUICKSTART',
 					sublime.Region(0),
 					fmatter + text,
 					sublime.LAYOUT_INLINE,

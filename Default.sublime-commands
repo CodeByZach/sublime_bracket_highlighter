@@ -134,6 +134,6 @@
 		"args": { "url": "http://facelessuser.github.io/BracketHighlighter/" }
 	},
 	{ "caption": "BracketHighlighter: Quick Start Guide", "command": "bracket_highlighter_doc",
-		"args": { "page": "${packages}/BracketHighlighter/quickstart.md" }
+		"args": { "page": "${packages}/BracketHighlighter/QUICKSTART.md" }
 	}
 ]
