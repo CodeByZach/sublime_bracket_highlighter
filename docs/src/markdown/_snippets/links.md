@@ -1,6 +1,6 @@
 [aprosopo]: https://github.com/facelessuser/Aprosopo
 [backrefs]: http://facelessuser.github.io/backrefs/
-[keymap]: https://github.com/facelessuser/BracketHighlighter/blob/master/Example.sublime-keymap
+[keymap]: https://github.com/facelessuser/BracketHighlighter/blob/master/Default.sublime-keymap
 [mkdocs]: http://www.mkdocs.org
 [mkdocs-material]: https://github.com/squidfunk/mkdocs-material
 [regreplace]: https://github.com/facelessuser/RegReplace

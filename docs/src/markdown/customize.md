@@ -2,7 +2,7 @@
 
 ## Overview
 
-BH is extremely flexible and can be customized and extended to fit a user's needs.  The first step to customizing the existing rules and settings is to create a `bh_core.sublime-settings` in your `User` folder.  With this file you can override any of the settings or bracket rules.  By changing these settings, you can add support for new languages, or change the look of highlighting, and much more.
+BH is extremely flexible and can be customized and extended to fit a user's needs.  The first step to customizing the existing rules and settings is to create a `BracketHighlighter.sublime-settings` in your `User` folder.  With this file you can override any of the settings or bracket rules.  By changing these settings, you can add support for new languages, or change the look of highlighting, and much more.
 
 ## Core Visual Settings
 
@@ -320,7 +320,7 @@ Turn on debug logging.  Set to `true` to enable or `false` to disable.
 
 ## Tag Plugin Settings
 
-This section covers settings found in `bh_tag.sublime-settings`.  All tag settings are dictionaries.  Each key represents a tag mode such as: `html`, `xhtml`, `cfml`, etc.  All of these are exposed so that even non-standard HTML syntax can be supported.
+This section covers settings found in `BracketHighlighter_tag.sublime-settings`.  All tag settings are dictionaries.  Each key represents a tag mode such as: `html`, `xhtml`, `cfml`, etc.  All of these are exposed so that even non-standard HTML syntax can be supported.
 
 !!! warning "Attention!"
     More tag mode keys can be added, but they **must** be added to **every** setting with valid parameters.
@@ -503,7 +503,7 @@ Specifies the ending/closing tag regex.
 
 ## Swap Brackets Plugin Settings
 
-Swappable brackets for a given language can be defined in `bh_swapping.sublime-settings`.  Swap rules are found under the key `swapping` where `swapping` is an array of language swap rules.
+Swappable brackets for a given language can be defined in `BracketHighlighter_swapping.sublime-settings`.  Swap rules are found under the key `swapping` where `swapping` is an array of language swap rules.
 
 ```js
     "swapping": [
@@ -544,7 +544,7 @@ Within the `brackets` key, you can specify where the cursor(s) will appear by us
 
 ## Wrap Brackets Plugin Settings
 
-Wrapping brackets for a given language can be defined in `bh_wrapping.sublime-settings`.  Wrap rules are found under the key `wrapping` where `wrapping` is an array of language wrap rules.
+Wrapping brackets for a given language can be defined in `BracketHighlighter_wrapping.sublime-settings`.  Wrap rules are found under the key `wrapping` where `wrapping` is an array of language wrap rules.
 
 ```js
     "wrapping": [
@@ -595,7 +595,7 @@ BH uses a wrapper around Python's re regex library to add support for additional
 
 ### Configuring Brackets Rules
 
-Brackets are defined under `brackets` in `bh_core.sublime-settings`.
+Brackets are defined under `brackets` in `BracketHighlighter.sublime-settings`.
 
 `angle` and `curly` brackets will be used as an example (not all options may be shown in these examples):
 
@@ -643,7 +643,7 @@ Parameter                              | Description
 
 ### Configuring Scope Brackets Rules
 
-Scope Brackets are defined under `scope_brackets` in `bh_core.sublime-settings`.
+Scope Brackets are defined under `scope_brackets` in `BracketHighlighter.sublime-settings`.
 
 `py_single_quote` bracket will be used as an example (not all options are shown in this example):
 
@@ -676,7 +676,7 @@ Parameters                   | Description
 
 ### Bracket Rule Management
 
-In the past, BracketHighlighter required a user to copy the entire bracket list to the user `bh_core.sublime-settings` file.  This was a cumbersome requirement that also punished a user because if they did this, they wouldn't automatically get updates to the rules as all the rules were now overridden by the user's settings file.
+In the past, BracketHighlighter required a user to copy the entire bracket list to the user `BracketHighlighter.sublime-settings` file.  This was a cumbersome requirement that also punished a user because if they did this, they wouldn't automatically get updates to the rules as all the rules were now overridden by the user's settings file.
 
 BracketHighlighter now lets you add or modify existing rules without overriding the entire rule set, or even the entire target rule.  Let's say you have a custom language you want to have on your machine. Now, you can simply add it to one of the two settings arrays: "user_scope_brackets" and "user_brackets":
 
@@ -796,7 +796,7 @@ So, unless you are forking BH to pull request a change to the default rules, you
 
 ## Configuring Highlight Style
 
-Each bracket definition (described in *Configuring Scope Brackets* and *Configuring Brackets*) has a `style` option that you can assign a specific style to.  The name of the style corresponds to a style definition.  Style definitions are defined under `bracket_styles` in `bh_core.sublime-settings`. Normally you would override the existing style or add new styles through the `user_bracket_styles` instead of editing `bracket_styles` directly; direct editing of `bracket_styles` is mainly reserved for providing defaults to a user.
+Each bracket definition (described in *Configuring Scope Brackets* and *Configuring Brackets*) has a `style` option that you can assign a specific style to.  The name of the style corresponds to a style definition.  Style definitions are defined under `bracket_styles` in `BracketHighlighter.sublime-settings`. Normally you would override the existing style or add new styles through the `user_bracket_styles` instead of editing `bracket_styles` directly; direct editing of `bracket_styles` is mainly reserved for providing defaults to a user.
 
 You can add and remove as many styles as you wish, but there are two special style definitions whose names are reserved: `default` and `unmatched`. If your remove them, they will be added back automatically in memory, but you can configure them.  All styles, even the *reserved* styles, follow the same format.  See description below:
 
@@ -844,7 +844,7 @@ As shown in the example above, an option can be omitted.  If an option is omitte
 
 ### Example: Adding and Overriding Styles
 
-To customize a color, style, or icon, you can simply override that specific style definition by placing your override in `user_bracket_styles` in your `Packages/User/bh_core.sublime-settings` file. You are also free to add new styles as well. Just and the key name you want to add/override and specify the options you want to explicitly define, and those specific options will override the existing rule or the defaults.
+To customize a color, style, or icon, you can simply override that specific style definition by placing your override in `user_bracket_styles` in your `Packages/User/BracketHighlighter.sublime-settings` file. You are also free to add new styles as well. Just and the key name you want to add/override and specify the options you want to explicitly define, and those specific options will override the existing rule or the defaults.
 
 In this example, we will override the exiting `curly` and *only* change the color.  We will continue to use the `icon` and `style` defined defined in the exiting `curly` rule. We've used the region-ish color `region.bluish` (for Sublime 3148+) to use the closes color Sublime can find to blue in the existing color scheme. We could have also used any other scope that the color scheme already has rules for.
 
@@ -906,7 +906,7 @@ For Sublime builds &lt;3152, you'd have to actually modify the existing color sc
 ??? settings "Sublime Color Scheme Example"
     Assuming I was dissatisfied with using the built-in region-ish colors and wanted to create my own scopes (and was on a Sublime build that supports `.sublime-color-scheme` files), this is how you would it.
 
-    Override the bracket styles you want to apply a custom scope to (you can do some or all) by placing something similar in `Packages/User/bh_core.sublime-settings`:
+    Override the bracket styles you want to apply a custom scope to (you can do some or all) by placing something similar in `Packages/User/BracketHighlighter.sublime-settings`:
 
     ```js
     // Define region highlight styles
@@ -999,7 +999,7 @@ For Sublime builds &lt;3152, you'd have to actually modify the existing color sc
 ??? settings "Pre Sublime Color Scheme Example"
     Assuming I was dissatisfied with using the built-in scopes for styling bracket highlighting and wanted to create my own scopes (and was on a Sublime build before 3152), this is how you would it.
 
-    Override the bracket styles you want to apply a custom scope to (you can do some or all) by placing something similar in `Packages/User/bh_core.sublime-settings`:
+    Override the bracket styles you want to apply a custom scope to (you can do some or all) by placing something similar in `Packages/User/BracketHighlighter.sublime-settings`:
 
     ```js
     // Define region highlight styles
@@ -1320,7 +1320,7 @@ These are plugins that are attached to the bracket definition and aid in process
     def post_match(view, name, style, first, second, center, bfr, threshold):
         left, right = first, second
         threshold = [0, len(bfr)] if threshold is None else threshold
-        tag_settings = sublime.load_settings("bh_core.sublime-settings")
+        tag_settings = sublime.load_settings("BracketHighlighter.sublime-settings")
         tag_mode = get_tag_mode(view, tag_settings.get("tag_mode", {}))
         tag_style = tag_settings.get("tag_style", "angle")
         bracket_style = style
@@ -1404,7 +1404,7 @@ The `args` parameter is a dictionary.
 Parameter        | Description
 ---------------- |------------
 `lines`          | Show the number of lines between the matched brackets in the status bar.
-`no_outside_adj` | This is a parameter used to tell the plugin to ignore the `bracket_outside_adjacent` setting.  This is by default used for the `bracketselect` commands to ignore outside adjacent matching so it can do expanding selections or jump to parents brackets.  The default is `false` when not defined, but it can be set to `true` or `null` in JSON (it would be `None` if defined directly in Python code).  When `null`, the value will be read from `ignore_outside_adjacent_in_plugin` setting in the `bh_core.sublime-settings` file for convenient altering of the behavior.
+`no_outside_adj` | This is a parameter used to tell the plugin to ignore the `bracket_outside_adjacent` setting.  This is by default used for the `bracketselect` commands to ignore outside adjacent matching so it can do expanding selections or jump to parents brackets.  The default is `false` when not defined, but it can be set to `true` or `null` in JSON (it would be `None` if defined directly in Python code).  When `null`, the value will be read from `ignore_outside_adjacent_in_plugin` setting in the `BracketHighlighter.sublime-settings` file for convenient altering of the behavior.
 `plugin`         | Configuration for the plugin to be used.
 
 The `plugin` parameter is a dictionary that contains 3 arguments that define which plugin should get run, under which circumstance it is run, and with what parameters it is run with.

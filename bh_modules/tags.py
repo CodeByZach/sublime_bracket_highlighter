@@ -72,7 +72,7 @@ def get_tag_mode(view, tag_mode_config):
 
 def highlighting(view, name, style, left, right):
     """Highlight only the tag name."""
-    tag_settings = sublime.load_settings("bh_tag.sublime-settings")
+    tag_settings = sublime.load_settings("BracketHighlighter_tag.sublime-settings")
     match_style = tag_settings.get("tag_style", {}).get(last_mode, None)
     if match_style is not None and style == match_style:
         tag_name = tag_settings.get('tag_name', {}).get(last_mode, r'[\w\:\.\-]+')
@@ -97,8 +97,8 @@ def post_match(view, name, style, first, second, center, bfr, threshold):
     global last_mode
     left, right = first, second
     threshold = [0, len(bfr)] if threshold is None else threshold
-    bh_settings = sublime.load_settings("bh_core.sublime-settings")
-    tag_settings = sublime.load_settings("bh_tag.sublime-settings")
+    bh_settings = sublime.load_settings("BracketHighlighter.sublime-settings")
+    tag_settings = sublime.load_settings("BracketHighlighter_tag.sublime-settings")
     tag_mode = get_tag_mode(view, tag_settings.get("tag_mode", []))
     tag_style = tag_settings.get("tag_style", {}).get(tag_mode, '?')
     last_mode = tag_mode
@@ -138,7 +138,7 @@ class TagSearch(object):
         self.return_prev = False
         self.done = False
         self.view = view
-        settings = sublime.load_settings("bh_tag.sublime-settings")
+        settings = sublime.load_settings("BracketHighlighter_tag.sublime-settings")
         try:
             self.scope_exclude = settings.get("tag_scope_exclude", {}).get(mode, ['string', 'comment'])
         except Exception:
@@ -213,7 +213,7 @@ class TagMatch(object):
     def __init__(self, view, bfr, threshold, first, second, center, outside_adj, mode):
         """Prepare tag match object."""
 
-        tag_settings = sublime.load_settings('bh_tag.sublime-settings')
+        tag_settings = sublime.load_settings('BracketHighlighter_tag.sublime-settings')
         self.view = view
         self.bfr = bfr
         self.mode = mode

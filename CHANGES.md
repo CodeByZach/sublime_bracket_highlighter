@@ -97,7 +97,7 @@ support for old, early implementation of popups and phantoms.
 
 - **NEW**: Add links in menu to documentation and issues.
 - **NEW**: Provide new local quickstart guide from the menu.
-- **NEW**: Breaking change to `bh_tag.sublime-settings`. `tag_mode` is now an ordered list of dictionaries.  
+- **NEW**: Breaking change to `BracketHighlighter_tag.sublime-settings`. `tag_mode` is now an ordered list of dictionaries.  
 `self_closing_patterns` and `single_tag_patterns` and replaced with `optional_tag_patterns`,  
 `void_tag_patterns`, and `self_closing_tag_patterns`.
 - **NEW**: Add new `first_line` rule for determining tag mode.

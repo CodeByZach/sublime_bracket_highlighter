@@ -50,7 +50,7 @@ matrix:
 
 - name: markdown
   sources:
-  - readme.md
+  - README.md
   aspell:
     lang: en
   dictionary:

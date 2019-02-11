@@ -65,7 +65,7 @@ When `show_offscreen_bracket_popup` is enabled, mousing over an on screen bracke
 
 ## Bracket Plugin Commands
 
-BH is also extendable via plugins and provides a number of built-in Bracket Plugins that take advantage of BH's matching to provide additional features.  Most plugin features are available via the command palette.  To see how to configure shortcuts, see the [`Example.sublime-keymap`][keymap] file.
+BH is also extendable via plugins and provides a number of built-in Bracket Plugins that take advantage of BH's matching to provide additional features.  Most plugin features are available via the command palette.  To see how to configure shortcuts, see the [`Default.sublime-keymap`][keymap] file.
 
 ### Bracket Select Plugin
 
@@ -73,11 +73,11 @@ The Bracket Select plugin selects the content between the brackets or moves the 
 
 ### Swap Brackets Plugin
 
-The Swap Brackets plugin can swap the current brackets to another type of bracket.  When selected, it will displays the bracket options that are allowed for the current language.  Allowed brackets are defined in `bh_swapping.sublime-settings`.
+The Swap Brackets plugin can swap the current brackets to another type of bracket.  When selected, it will displays the bracket options that are allowed for the current language.  Allowed brackets are defined in `BracketHighlighter_swapping.sublime-settings`.
 
 ### Wrap Brackets Plugin
 
-The Wrap Brackets plugin wraps selected text with a bracket pair.  When selected, it will display the bracket options that are allowed for the current language.  Allowed brackets are defined in `bh_wrapping.sublime-settings`.
+The Wrap Brackets plugin wraps selected text with a bracket pair.  When selected, it will display the bracket options that are allowed for the current language.  Allowed brackets are defined in `BracketHighlighter_wrapping.sublime-settings`.
 
 ### Bracket Remove Plugin
 
@@ -105,6 +105,6 @@ Tag Name Select plugin selects the opening and closing tag name of the current s
 
 ## Shortcuts
 
-BH provides no shortcuts in order to avoid shortcut conflicts, but you can view the included [`Example.sublime-keymap`][keymap] file to get an idea how to set up your own.
+BH provides no shortcuts in order to avoid shortcut conflicts, but you can view the included [`Default.sublime-keymap`][keymap] file to get an idea how to set up your own.
 
 --8<-- "refs.md"
