@@ -235,7 +235,7 @@
 								"caption": "README",
 								"command": "open_file",
 								"args": { "file": "${packages}/BracketHighlighter/README.md" }
-							}
+							},
 							{ "caption": "-" },
 							{
 								"caption": "Changelog",
