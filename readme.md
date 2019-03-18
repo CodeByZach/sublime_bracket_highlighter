@@ -28,4 +28,10 @@ https://eatbreathecode.github.io/sublime_bracket_highlighter/
 
 # License
 
-This work is licensed under the [The MIT License](LICENSE.md).
+This work is licensed under the [The MIT License](LICENSE).
+
+[travis-image]: https://img.shields.io/travis/facelessuser/BracketHighlighter/master.svg
+[travis-link]: https://travis-ci.org/facelessuser/BracketHighlighter
+[pc-image]: https://img.shields.io/packagecontrol/dt/BracketHighlighter.svg
+[pc-link]: https://packagecontrol.io/packages/BracketHighlighter
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
