@@ -446,7 +446,7 @@ class BhCore(object):
 
 		# Setup thread to do another match to refresh the match
 		if self.refresh_match:
-            start_task()
+			start_task()
 			bh_thread.type = BH_MATCH_TYPE_SELECTION
 			bh_thread.modified = True
 			bh_thread.time = time()
@@ -1035,7 +1035,7 @@ class BhListenerCommand(sublime_plugin.EventListener):
 
 		if self.ignore_event(view):
 			return
-        start_task()
+		start_task()
 		bh_thread.type = BH_MATCH_TYPE_EDIT
 		bh_thread.modified = True
 		bh_thread.view = view
@@ -1089,7 +1089,7 @@ class BhListenerCommand(sublime_plugin.EventListener):
 		if now - bh_thread.time > bh_thread.wait_time:
 			sublime.set_timeout(bh_thread.payload, 0)
 		else:
-            start_task()
+			start_task()
 			bh_thread.modified = True
 			bh_thread.time = now
 
@@ -1119,7 +1119,7 @@ class BhThread(threading.Thread):
 		"""Setup the thread."""
 
 		self.reset()
-        self.queue = Queue()
+		self.queue = Queue()
 		self.view = None
 		self.last_active = None
 		threading.Thread.__init__(self)
@@ -1129,7 +1129,7 @@ class BhThread(threading.Thread):
 
 		self.wait_time = 0.12
 		self.time = time()
-        self.queue = Queue()
+		self.queue = Queue()
 		self.modified = False
 		self.type = BH_MATCH_TYPE_SELECTION
 		self.ignore_all = False
@@ -1151,7 +1151,7 @@ class BhThread(threading.Thread):
 		"""Kill thread."""
 
 		self.abort = True
-        self.queue.put(True)
+		self.queue.put(True)
 		while self.is_alive():
 			pass
 		self.reset()
@@ -1159,13 +1159,13 @@ class BhThread(threading.Thread):
 	def run(self):
 		"""Thread loop."""
 
-        task = False
+		task = False
 		while not self.abort:
-            task = self.queue.get()
-            while task and not self.abort:
+			task = self.queue.get()
+			while task and not self.abort:
 			if self.modified is True and time() - self.time > self.wait_time:
 				sublime.set_timeout(self.payload, 0)
-                    task = False
+					task = False
 			sleep(0.5)
 
 
@@ -1174,10 +1174,10 @@ class BhThread(threading.Thread):
 ####################
 
 def start_task():
-    """Start task."""
+	"""Start task."""
 
-    if bh_thread.is_alive():
-        bh_thread.queue.put(True)
+	if bh_thread.is_alive():
+		bh_thread.queue.put(True)
 
 
 def init_bh_match():
