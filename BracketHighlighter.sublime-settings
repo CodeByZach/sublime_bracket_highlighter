@@ -362,6 +362,18 @@
 			"ignore_string_escape": true,
 			"enabled": true
 		},
+		// OCaml
+		{
+			"name": "ocaml_comment",
+			"open": "(\\(\\*)",
+			"close": "(\\*\\))",
+			"style": "default",
+			"scope_exclude": ["-comment"],
+			"language_filter": "whitelist",
+			"language_list": ["OCaml"],
+			"sub_bracket_search": "false",
+			"enabled": true
+		},
 		//XML
 		{
 			"name":"xml_cdata",
