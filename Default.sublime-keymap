@@ -43,7 +43,7 @@
  * 				"no_outside_adj": null
  * 			}
  * 		},
- * 	
+ *
  * 		// Select text between brackets
  * 		{ "keys": ["ctrl+alt+super+s"], "command": "bh_key",
  * 			"args":
@@ -53,7 +53,7 @@
  * 				"plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect" }
  * 			}
  * 		},
- * 	
+ *
  * 		// Select text including brackets
  * 		{ "keys": ["ctrl+alt+super+d"], "command": "bh_key",
  * 			"args":
@@ -63,22 +63,22 @@
  * 				"plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"always_include_brackets": true} }
  * 			}
  * 		},
- * 	
+ *
  * 		// Select tag name of HTML/XML tag (both opening name and closing)
  * 		{ "keys": ["ctrl+alt+super+t"], "command": "bh_key",
  * 			"args": { "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect" } }
  * 		},
- * 	
+ *
  * 		// Select the attribute to the right of the cursor (will wrap inside the tag)
  * 		{ "keys": ["ctrl+alt+super+right"], "command": "bh_key",
  * 			"args": {"plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "right"} }}
  * 		},
- * 	
+ *
  * 		// Select the attribute to the left of the cursor (will wrap inside the tag)
  * 		{ "keys": ["ctrl+alt+super+left"], "command": "bh_key",
  * 			"args": { "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "left"} } }
  * 		},
- * 	
+ *
  * 		// Convert single quote string to double quoted string and vice versa
  * 		// Will handle escaping or unescaping quotes within the string
  * 		{ "keys": ["ctrl+alt+super+q"], "command": "bh_key",
@@ -88,12 +88,12 @@
  * 				"plugin": { "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"], "command": "bh_modules.swapquotes" }
  * 			}
  * 		},
- * 	
+ *
  * 		// Fold contents between brackets
  * 		{ "keys": ["ctrl+alt+super+["], "command": "bh_key",
  * 			"args": { "plugin": { "type": ["__all__"], "command" : "bh_modules.foldbracket" } }
  * 		},
- * 	
+ *
  * 		{ "keys": ["ctrl+alt+super+e"], "command": "swap_brackets" }, // Swap brackets with another type
  * 		{ "keys": ["ctrl+alt+super+w"], "command": "wrap_brackets" }, // Surround selection with brackets from quick panel
  * 		{ "keys": ["ctrl+alt+super+v"], "command": "bh_toggle_high_visibility" } // Toggle high visibility mode
