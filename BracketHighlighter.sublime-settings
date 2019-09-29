@@ -320,6 +320,18 @@
 	// Once all matches are found, the closest pair surrounding
 	// the cursor are selected.
 	"brackets": [
+		// OCaml
+		{
+			"name": "ocaml_comment",
+			"open": "(\\(\\*)",
+			"close": "(\\*\\))",
+			"style": "default",
+			"scope_exclude": ["-comment"],
+			"language_filter": "whitelist",
+			"language_list": ["OCaml"],
+			"sub_bracket_search": "false",
+			"enabled": true
+		},
 		// Basic brackets
 		{
 			"name": "curly",
@@ -353,25 +365,13 @@
 				"string",
 				"comment",
 				"source.regexp constant.character.escape",
-				"punctuation.definition.case-pattern.shell",
+				"keyword.control.conditional.patterns.end.shell",
 				"source.yaml-tmlanguage constant.character.escape"
 			],
 			"language_filter": "blacklist",
 			"language_list": ["Plain text", "Hex", "RTF"],
 			"find_in_sub_search": "true",
 			"ignore_string_escape": true,
-			"enabled": true
-		},
-		// OCaml
-		{
-			"name": "ocaml_comment",
-			"open": "(\\(\\*)",
-			"close": "(\\*\\))",
-			"style": "default",
-			"scope_exclude": ["-comment"],
-			"language_filter": "whitelist",
-			"language_list": ["OCaml"],
-			"sub_bracket_search": "false",
 			"enabled": true
 		},
 		//XML
