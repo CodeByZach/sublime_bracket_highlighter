@@ -352,7 +352,7 @@ class BhCore(object):
 	####################
 	# Matching
 	####################
-    def match(self, view, force_match=True):
+	def match(self, view, force_match=True):
 		"""Preform matching brackets surround the selection(s)."""
 
 		if view is None:
@@ -361,8 +361,8 @@ class BhCore(object):
 		# Ensure nothing else calls BH until done
 		view.settings().set("bracket_highlighter.busy", True)
 
-        regions_key = "bracket_highlighter.regions"
-        locations_key = "bracket_highlighter.locations"
+		regions_key = "bracket_highlighter.regions"
+		locations_key = "bracket_highlighter.locations"
 
 		# Abort if disabled
 		if not GLOBAL_ENABLE:
@@ -390,7 +390,7 @@ class BhCore(object):
 		if not self.ignore_threshold and self.kill_highlight_on_threshold:
 			if self.use_selection_threshold and num_sels > self.auto_selection_threshold:
 				self.regions.reset(view, num_sels)
-                self.regions.highlight(HIGH_VISIBILITY)
+				self.regions.highlight(HIGH_VISIBILITY)
 				view.settings().set("bracket_highlighter.busy", False)
 				return
 
@@ -432,7 +432,7 @@ class BhCore(object):
 				multi_select_count += 1
 
 		# Highlight, focus, and display lines etc.
-        self.regions.highlight(HIGH_VISIBILITY)
+		self.regions.highlight(HIGH_VISIBILITY)
 
 		# Free up BH
 		self.search = None
@@ -782,7 +782,7 @@ class BhOffscreenPopupCommand(sublime_plugin.TextCommand):
 
 		# Get relative bracket regions for point
 		if point is not None:
-            locations_key = 'bracket_highlighter.locations'
+			locations_key = 'bracket_highlighter.locations'
 			locations = self.view.settings().get(locations_key, {})
 			for k, v in locations.get('unmatched', {}).items():
 				if v[0] <= point <= v[1]:
@@ -984,7 +984,7 @@ class BhListenerCommand(sublime_plugin.EventListener):
 			index = None
 			unmatched = False
 			if hover_zone == sublime.HOVER_TEXT:
-                locations_key = 'bracket_highlighter.locations'
+				locations_key = 'bracket_highlighter.locations'
 				locations = view.settings().get(locations_key, {})
 				for k, v in locations.get('unmatched', {}).items():
 					if v[0] <= point <= v[1]:
@@ -1124,8 +1124,8 @@ class BhThread(threading.Thread):
 
 		self.modified = False
 		self.ignore_all = True
-        if bh_match is not None and self.view is not None:
-            bh_match(self.view, self.type == BH_MATCH_TYPE_EDIT)
+		if bh_match is not None and self.view is not None:
+			bh_match(self.view, self.type == BH_MATCH_TYPE_EDIT)
 		self.view = None
 		self.ignore_all = False
 		self.time = time()
