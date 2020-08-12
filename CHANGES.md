@@ -1,5 +1,14 @@
 # BracketHighlighter
 
+## 2.28.1
+
+- **FIX**: Handle HTML attributes even when there are no spaces between them.
+
+## 2.28.0
+
+- **NEW**: Rename `language_filter` options `whitelist` and `blacklist` to `allowlist` and `blocklist` respectively.
+- **NEW**: Add global option `gutter_icons` to control enabling or disabling icons.
+
 ## 2.27.10
 
 - **FIX**: Handle certain regular expression compilation failures in a more graceful way.
