@@ -1,5 +1,5 @@
 # BracketHighlighter
-[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_bracket_highlighter.svg?label=version)](https://github.com/EatBreatheCode/sublime_bracket_highlighter/releases)
+[![Latest Release](https://img.shields.io/github/tag/CodeByZach/sublime_bracket_highlighter.svg?label=version)](https://github.com/CodeByZach/sublime_bracket_highlighter/releases)
 [![Build][github-ci-image]][github-ci-link]
 [![Package Control][pc-image]][pc-link]
 [![License][license-image]][license-link]
@@ -28,14 +28,14 @@ Moving forward, I have thrown away all of the code and have completely rewritten
 
 # Documentation
 
-https://eatbreathecode.github.io/sublime_bracket_highlighter/
+https://codebyzach.github.io/sublime_bracket_highlighter/
 
 # License
 
 This work is licensed under the [The MIT License](LICENSE).
 
-[github-ci-image]: https://github.com/EatBreatheCode/sublime_bracket_highlighter/workflows/build/badge.svg?branch=master&event=push
-[github-ci-link]: https://github.com/EatBreatheCode/sublime_bracket_highlighter/actions?query=workflow%3Abuild+branch%3Amaster
+[github-ci-image]: https://github.com/CodeByZach/sublime_bracket_highlighter/workflows/build/badge.svg?branch=master&event=push
+[github-ci-link]: https://github.com/CodeByZach/sublime_bracket_highlighter/actions?query=workflow%3Abuild+branch%3Amaster
 [pc-image]: https://img.shields.io/packagecontrol/dt/BracketHighlighter.svg?labelColor=333333&logo=sublime%20text
 [pc-link]: https://packagecontrol.io/packages/BracketHighlighter
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?labelColor=333333

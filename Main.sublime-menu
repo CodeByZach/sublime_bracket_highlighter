@@ -244,7 +244,7 @@
 							{
 								"caption": "Documentation",
 								"command": "bracket_highlighter_open_site",
-								"args": { "url": "https://eatbreathecode.github.io/sublime_bracket_highlighter/" }
+								"args": { "url": "https://codebyzach.github.io/sublime_bracket_highlighter/" }
 							},
 							{
 								"caption": "Quick Start Guide",
