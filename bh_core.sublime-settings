@@ -1,136 +1,179 @@
 {
-    // Debug logging
+    /*
+     * Debug logging
+     */
     "debug_enable": false,
 
-    // When only either the left or right bracket can be found
-    // this defines if the unmatched bracket should be shown.
+    /*
+     * When only either the left or right bracket can be found this defines if the unmatched bracket should be shown.
+     */
     "show_unmatched": true,
 
-    // Do the opposite of `show_unmatched` for the languages listed below
+    /*
+     * Do the opposite of `show_unmatched` for the languages listed below.
+     */
     "show_unmatched_exceptions": [],
 
-    // Enable high visibility by default when sublime starts up
-    // If sublime is already running and this gets changed,
-    // you will not see any changes (restart required to see change)
+    /*
+     * Enable high visibility by default when sublime starts up.
+     * If sublime is already running and this gets changed, you will not see any changes (restart required to see change).
+     */
     "high_visibility_enabled_by_default": false,
 
-    // Experimental: Creates a visible bar at the beginning of all lines between
-    // multiline bracket spans.
+    /*
+     * Experimental: Creates a visible bar at the beginning of all lines between multiline bracket spans.
+     */
     "content_highlight_bar": false,
 
-    // Show hover popup
-    // This will show a hover popup when mousing over
-    // the visible bracket if the other
-    // highlighted matching bracket is off screen.
-    // It will show line text of the off screen bracket -/+ 128 chars
-    // from the bracket start and end points.
-    // A link will be available allowing the user to click and jump to
-    // the other bracket.
+    /*
+     * Show hover popup
+     * This will show a hover popup when mousing over the visible bracket if the other highlighted matching bracket is off screen.
+     * It will show line text of the off screen bracket -/+ 128 chars from the bracket start and end points.
+     * A link will be available allowing the user to click and jump to the other bracket.
+     */
     "show_offscreen_bracket_popup": true,
 
-    // If enabled with `show_offscreen_bracket_popup`,the popup will be shown
-    // even if brackets are onscreen.
+    /*
+     * If enabled with `show_offscreen_bracket_popup`,the popup will be shown even if brackets are onscreen.
+     */
     "show_bracket_popup_always": false,
 
-    // Adjust char per line context of bracket popup.
+    /*
+     * Adjust char per line context of bracket popup.
+     */
     "popup_char_context": 120,
 
-    // Adjust number of lines of additional context
-    // that are shown when brackets are vertically off screen.
-    // Specified line count is split to context before and after the target line.
-    // So a value of 4 would give you two lines of context before and two lines after.
+    /*
+     * Adjust number of lines of additional context that are shown when brackets are vertically off screen.
+     * Specified line count is split to context before and after the target line.
+     * So a value of 4 would give you two lines of context before and two lines after.
+     */
     "popup_line_context": 2,
 
-    // Experimental: Use `popup_bracket_emphasis` to customize the popup's bracket emphasis color
+    /*
+     * Experimental: Use `popup_bracket_emphasis` to customize the popup's bracket emphasis color.
+     */
     "use_custom_popup_bracket_emphasis": false,
 
-    // Experimental: Specify the scope (to get color) to emphasize the off screen bracket
-    // in popups.  Alternatively you can use a hex value in the form `#rgb` or `#rrggbb`.
+    /*
+     * Experimental: Specify the scope (to get color) to emphasize the off screen bracket in popups.
+     * Alternatively you can use a hex value in the form `#rgb` or `#rrggbb`.
+     */
     "popup_bracket_emphasis": "keyword",
 
-    // Experimental: Align the content highlight bar at the bracket indent level
+    /*
+     * Experimental: Align the content highlight bar at the bracket indent level
+     */
     "align_content_highlight_bar": false,
 
-    // Experimental: Allow bracket highlighter to search in widgets.
-    // Most widgets use Plain Text which BH should ignore,
-    // But regex find views views are usually regular expression
-    // Which should be the only views to trigger BH.
+    /*
+     * Experimental: Allow bracket highlighter to search in widgets.
+     * Most widgets use Plain Text which BH should ignore, but regex find views are
+     * usually regular expression which should be the only views to trigger BH.
+     */
     "search_in_widgets": false,
 
-    // Show brackets in the minimap.
-    // Depending on your highlight style, regions may not be visible in minimap.
-    // "underline" won't show up due to it being a style consisting of
-    // multiple zero width selections to create a fat underline.
-    // But the following styles should show up fine as they are normal regions styles:
-    //     - thin_underline
-    //     - solid
-    //     - outline
-    //     - squiggly
-    //     - stippled
+    /*
+     * Show brackets in the minimap.
+     * Depending on your highlight style, regions may not be visible in minimap.
+     * "underline" won't show up due to it being a style consisting of
+     * multiple zero width selections to create a fat underline.
+     * But the following styles should show up fine as they are normal regions styles:
+     *   - thin_underline
+     *   - solid
+     *   - outline
+     *   - squiggly
+     *   - stippled
+     */
     "show_in_minimap": false,
 
-    // High visibility style and color for high visibility mode
-    // (`solid`|`outline`|`underline`)
-    // ST3 has additional options of (`thin_underline`|`squiggly`|`stippled`)
+    /*
+     * High visibility style and color for high visibility mode (`solid`|`outline`|`underline`).
+     * ST3 has additional options of (`thin_underline`|`squiggly`|`stippled`).
+     */
     "high_visibility_style": "outline",
 
-    // (scope|__default__|__bracket__)
+    /*
+     * (scope|__default__|__bracket__)
+     */
     "high_visibility_color": "__bracket__",
 
-    // Match brackets only when the cursor is touching the inside of the bracket
+    /*
+     * Match brackets only when the cursor is touching the inside of the bracket.
+     */
     "match_only_adjacent": false,
 
-    // Outside adjacent bracket matching
+    /*
+     * Outside adjacent bracket matching.
+     */
     "bracket_outside_adjacent": true,
 
-    // Experimental: Special matching mode for block cursor.
-    // Essentially, this provides a matching mode that makes a little more
-    // sense to some in regards to the visual representation of block cursors.
-    // This will ignore `bracket_outside_adjacent`.
+    /*
+     * Experimental: Special matching mode for block cursor.
+     * Essentially, this provides a matching mode that makes a little
+     * more sense to some in regards to the visual representation of block cursors.
+     * This will ignore `bracket_outside_adjacent`.
+     */
     "block_cursor_mode": false,
 
-    // When `bracket_outside_adjacent` is set, and a plugin command explicitly sets
-    // `no_outside_adj` to `None` instead of `true` or the default `false`,
-    // this value will be used.
+    /*
+     * When `bracket_outside_adjacent` is set, and a plugin command explicitly sets
+     * `no_outside_adj` to `None` instead of `true` or the default `false`, this value will be used.
+     */
     "ignore_outside_adjacent_in_plugin": true,
 
-    // When `block_cursor_mode` is set, and a plugin command explicitly sets
-    // "no_block_mode" to `None` instead of `true` or the default `false`,
-    // this value will be used.
+    /*
+     * When `block_cursor_mode` is set, and a plugin command explicitly sets
+     * "no_block_mode" to `None` instead of `true` or the default `false`, this value will be used.
+     */
     "ignore_block_mode_in_plugin": true,
 
-    // Character threshold to search
+    /*
+     * Character threshold to search
+     */
     "search_threshold": 5000,
 
-    // Ignore threshold
+    /*
+     * Ignore threshold
+     */
     "ignore_threshold": false,
 
-    // Set mode for string escapes to ignore (`regex`|`string`)
+    /*
+     * Set mode for string escapes to ignore (`regex`|`string`).
+     */
     "bracket_string_escape_mode": "string",
 
-    // Set max number of multi-select brackets that will be searched automatically
+    /*
+     * Set max number of multi-select brackets that will be searched automatically.
+     */
     "auto_selection_threshold" : 10,
 
-    // Enable this to completely kill highlighting if "auto_selection_threshold"
-    // is exceeded.  Default is to highlight up to the "auto_selection_threshold".
+    /*
+     * Enable this to completely kill highlighting if "auto_selection_threshold" is exceeded.
+     * Default is to highlight up to the "auto_selection_threshold".
+     */
     "kill_highlight_on_threshold": true,
 
-    // Disable gutter icons when doing multi-select
+    /*
+     * Disable gutter icons when doing multi-select.
+     */
     "no_multi_select_icons": false,
 
-    // Global control of gutter icons.
+    /*
+     * Global control of gutter icons.
+     */
     "gutter_icons": true,
 
-    // Rules that define the finding and matching of brackets
-    // that are contained in a common scope.
-    // Useful for bracket pairs that are the same but
-    // share a common scope.  Brackets are found by
-    // Finding the extent of the scope and using regex
-    // to look at the beginning and end to identify bracket.
-    // Use only if they cannot be targeted with traditional bracket
-    // rules.
+    /*
+     * Rules that define the finding and matching of brackets that are contained in a common scope.
+     * Useful for bracket pairs that are the same but share a common scope.
+     * Brackets are found by to look at the beginning and end to identify bracket.
+     * Use only if they cannot be targeted with traditional bracket rules.
+     */
     "scope_brackets": [
-        // Quotes
+        /*
+         * Quotes
+         */
         {
             "name": "py_single_quote",
             "open": "(?:u|b|f)?r?((?:'')?')",
@@ -222,7 +265,9 @@
             "sub_bracket_search": "true",
             "enabled": true
         },
-        // Regex for different Languages
+        /*
+         * Regex for different Languages
+         */
         {
             "name": "jsregex",
             "open": " *(/)",
@@ -256,7 +301,9 @@
             "sub_bracket_search": "true",
             "enabled": true
         },
-        // Markdown
+        /*
+         * Markdown
+         */
         {
             "name": "mditalic",
             "open": "(\\*|_)",
@@ -303,7 +350,9 @@
             "sub_bracket_search": "true",
             "enabled": true
         },
-        // LaTeX
+        /*
+         * LaTeX
+         */
         {
             "name": "latexmath_inline",
             "open": "(\\$)",
@@ -317,13 +366,15 @@
         }
     ],
 
-    // Rule definitions for finding and matching brackets.
-    // Brackets are found by using regex and can use scope
-    // qualifiers exclude certain matches.
-    // Once all matches are found, the closest pair surrounding
-    // the cursor are selected.
+    /*
+     * Rule definitions for finding and matching brackets.
+     * Brackets are found by using regex and can use scope qualifiers exclude certain matches.
+     * Once all matches are found, the closest pair surrounding the cursor are selected.
+     */
     "brackets": [
-        // OCaml
+        /*
+         * OCaml
+         */
         {
             "name": "ocaml_comment",
             "open": "(\\(\\*)",
@@ -335,7 +386,9 @@
             "sub_bracket_search": "false",
             "enabled": true
         },
-        // Basic brackets
+        /*
+         * Basic brackets
+         */
         {
             "name": "curly",
             "open": "(\\{)",
@@ -369,7 +422,6 @@
                 "comment",
                 "source.regexp constant.character.escape",
                 "keyword.control.conditional.patterns.end.shell",
-                "keyword.control.case.item",
                 "source.yaml-tmlanguage constant.character.escape"
             ],
             "language_filter": "blocklist",
@@ -378,7 +430,9 @@
             "ignore_string_escape": true,
             "enabled": true
         },
-        //XML
+        /*
+         * XML
+         */
         {
             "name":"xml_cdata",
             "open":"(<!\\[CDATA\\[)",
@@ -408,7 +462,9 @@
             "ignore_string_escape": true,
             "enabled": true
         },
-        // PHP Angle
+        /*
+         * PHP Angle
+         */
         {
             "name": "php_angle",
             "open": "(<\\?)(?:php)?",
@@ -419,7 +475,9 @@
             "language_list": ["HTML", "HTML 5"],
             "enabled": true
         },
-        // Angle
+        /*
+         * Angle
+         */
         {
             "name": "angle",
             "open": "(<)(?=[^?%]|$)",
@@ -462,7 +520,9 @@
             "plugin_library": "bh_modules.tags",
             "enabled": true
         },
-        // CSSedit groups
+        /*
+         * CSSedit groups
+         */
         {
             "name": "cssedit_groups",
             "open": "(/\\* *@group .*\\*/)",
@@ -473,8 +533,10 @@
             "language_list": ["CSS"],
             "enabled": true
         },
-        // Ruby embedded HTML
-        // !!! May conflict with `php_keywords` if enabled in same file !!!
+        /*
+         * Ruby embedded HTML
+         * !!! May conflict with `php_keywords` if enabled in same file !!!
+         */
         {
             "name": "ruby_embedded_html",
             "open": "((?:(?<=<%)|(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
@@ -490,7 +552,9 @@
             "language_list": ["HTML", "HTML 5", "HTML (Rails)"],
             "enabled": true
         },
-        // Ruby conditional statements
+        /*
+         * Ruby conditional statements
+         */
         {
             "name": "ruby",
             "open": "((?:(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|^\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|^\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
@@ -502,7 +566,9 @@
             "language_list": ["Ruby", "RSpec", "Better RSpec", "Ruby on Rails"],
             "enabled": true
         },
-        // C/C++ compile switches
+        /*
+         * C/C++ compile switches
+         */
         {
             "name": "c_compile_switch",
             "open": "\\#[ \\t]*(if|ifdef|ifndef)\\b",
@@ -513,8 +579,10 @@
             "language_list": ["C++", "C", "Objective-C++", "Objective-C", "CCpp", "C Improved"],
             "enabled": true
         },
-        // PHP conditional keywords
-        // !!! May conflict with `ruby_embedded_html` if enabled in same file !!!
+        /*
+         * PHP conditional keywords
+         * !!! May conflict with `ruby_embedded_html` if enabled in same file !!!
+         */
         {
             "name": "php_keywords",
             "open": "(?:(?<=^)|(?<=<\\?php)|(?<=<\\?))\\s*(if|foreach|for|while|switch)\\b(?=.*?\\)\\s*:\\s*(?://.*?|/\\*.*?\\*/\\s*?)?(?:\\?>|$))",
@@ -537,7 +605,9 @@
             ],
             "enabled": true
         },
-        // Erlang conditional statements
+        /*
+         * Erlang conditional statements
+         */
         {
             "name": "erlang",
             "open": "\\s*(\\b(?:if|case|begin|try|fun(?=\\s*\\()|receive)\\b)",
@@ -549,7 +619,9 @@
             "language_list": ["Erlang", "HTML (Erlang)"],
             "enabled": true
         },
-        //Bash
+        /*
+         * Bash
+         */
         {
             "name": "bash",
             "open": "(?:(?<!\\\\\\n)(?:;|^|&|\\|)\\s*)\\b(if|case|while|select|until|for)\\s",
@@ -561,7 +633,9 @@
             "language_list": ["Shell-Unix-Generic", "Bash"],
             "enabled": true
         },
-        //Fish shell
+        /*
+         * Fish shell
+         */
         {
             "name": "fish",
             "open": "(?:(?<!\\\\\\n)(?:;|^|&|\\||and|or|not)\\s*)\\b(begin|if|while|for|switch|function)(?:;|\\s)",
@@ -572,7 +646,9 @@
             "language_list": ["fish"],
             "enabled": true
         },
-        // Lua
+        /*
+         * Lua
+         */
         {
             "name": "lua",
             "open": "(?:(?<=[\\s;])|(?<=^))(if|function|do|repeat)\\b",
@@ -584,7 +660,9 @@
             "language_list": ["Lua"],
             "enabled": true
         },
-        // LaTeX
+        /*
+         * LaTeX
+         */
         {
             "name": "latexenv",
             "open": "(\\\\begin{[^}]*})",
@@ -597,7 +675,9 @@
             "sub_bracket_search": "true",
             "enabled": true
         },
-        // Pascal
+        /*
+         * Pascal
+         */
         {
             "name": "pascal",
             "open": "(?:(?<=^)|(?<=[\\s;]))(try|(?<=\\=\\s)(?:class|record|interface)|begin|repeat)\\b",
@@ -609,7 +689,9 @@
             "language_list": ["Pascal"],
             "enabled": true
         },
-        // Elixir
+        /*
+         * Elixir
+         */
         {
             "name": "elixir",
             "open": "\\b(do$|fn)\\b",
@@ -620,7 +702,9 @@
             "language_list": ["Elixir"],
             "enabled": true
         },
-        // CMake
+        /*
+         * CMake
+         */
         {
             "name": "cmake",
             "open": "\\b(foreach|function|if|macro|while)\\b",
@@ -632,7 +716,9 @@
             "language_list": ["CMake"],
             "enabled": true
         },
-        // `SINUMERIK 840D SL G-Code`
+        /*
+         * `SINUMERIK 840D SL G-Code`
+         */
         {
             "name": "s840d_gcode",
             "open": "\\b(IF(?!.*GOTO)|FOR|WHILE|REPEAT(?!.*GOTO))\\b",
@@ -644,7 +730,9 @@
             "language_list": ["s840d_gcode"],
             "enabled": true
         },
-        // `SINUMERIK 840D SL RunMyHmi`
+        /*
+         * `SINUMERIK 840D SL RunMyHmi`
+         */
         {
             "name": "s840d_hmi",
             "open": "^\\s*(//[ABGMS]|ACTIVATE|CHANGE|FOCUS|IF|LOAD|UNLOAD|OUTPUT|PRESS|SUB)\\b",
@@ -658,49 +746,48 @@
         }
     ],
 
-    // `user_scope_brackets` and `user_brackets` will be appended
-    // to the tail of scope_brackets and brackets respectively
-    // If you have custom rules that you don't want to commit to
-    // the official list, and do not need to be inserted before
-    // one of the official definitions, this is a good place to
-    // put yours rules and keep in sync with the defaults.
-    // If you want to disable all gutter icons, please set icon
-    // to none for all region with user_bracket_styles
+    /*
+     * `user_scope_brackets` and `user_brackets` will be appended to the tail of scope_brackets and brackets respectively.
+     * If you have custom rules that you don't want to commit to the official list, and do not need to be inserted
+     * before one of the official definitions, this is a good place to put yours rules and keep in sync with the defaults.
+     * If you want to disable all gutter icons, please set icon to none for all region with "user_bracket_styles".
+     */
     "user_scope_brackets": [],
     "user_brackets": [],
     "user_bracket_styles": {},
 
-    // Define region highlight styles
+    /*
+     * Define region highlight styles
+     */
     "bracket_styles": {
-        // `default` and `unmatched` styles are special
-        // styles. If they are not defined here,
-        // they will be generated internally with
-        // internal defaults.
-
-        // `default` style defines attributes that
-        // will be used for any style that does not
-        // explicitly define that attribute.  So if
-        // a style does not define a color, it will
-        // use the color from the "default" style.
+        /*
+         * `default` and `unmatched` styles are special styles. If they are not defined here,
+         * they will be generated internally with internal defaults.
+         *
+         * `default` style defines attributes that will be used for any style that does not explicitly define that attribute.
+         * So if a style does not define a color, it will use the color from the "default" style.
+         *
+         *
+         * Support the old convention of `brackethighlighter.default` for themes that already provide something.
+         * As this has always been the only one we've provided by default, all the others will use region-ish colors.
+         */
         "default": {
             "icon": "dot",
-            // Support the old convention of `brackethighlighter.default`
-            // for themes that already provide something.
-            // As this has always been the only one we've provided
-            // by default, all the others will use region-ish colors.
             "color": "region.yellowish brackethighlighter.default",
             "style": "underline"
         },
-
-        // This particular style is used to highlight
-        // unmatched bracket pairs.  It is a special
-        // style.
+        /*
+         * This particular style is used to highlight unmatched bracket pairs.
+         * It is a special style.
+         */
         "unmatched": {
             "icon": "question",
             "color": "region.redish",
             "style": "outline"
         },
-        // User defined region styles
+        /*
+         * User defined region styles
+         */
         "curly": {
             "icon": "curly_bracket",
             "color": "region.purplish"
