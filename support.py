@@ -5,7 +5,7 @@ import textwrap
 import webbrowser
 import re
 
-__version__ = "2.28.1"
+__version__ = "2.29.0"
 __pc_name__ = 'BracketHighlighter'
 
 CSS = '''
@@ -95,7 +95,7 @@ class BracketHighlighterSupportInfoCommand(sublime_plugin.ApplicationCommand):
 
 		try:
 			import backrefs
-			info["backrefs_version"] = format_version(backrefs, 'version')
+			info["backrefs_version"] = format_version(backrefs, '__version__')
 		except Exception:
 			info["backrefs_version"] = 'Version could not be acquired!'
 
