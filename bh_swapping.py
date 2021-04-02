@@ -10,82 +10,82 @@ from . import bh_wrapping
 
 
 class SwapBrackets(bh_wrapping.WrapBrackets):
-	"""
-	Swap Base Class.
+    """
+    Swap Base Class.
 
-	Swap base is derived from the wrap base.
-	"""
+    Swap base is derived from the wrap base.
+    """
 
-	def wrap(self, wrap_entry):
-		"""Setup for wrapping."""
+    def wrap(self, wrap_entry):
+        """Setup for wrapping."""
 
-		if wrap_entry < 0:
-			return
+        if wrap_entry < 0:
+            return
 
-		self._style = ["inline"]
+        self._style = ["inline"]
 
-		self.brackets = self._brackets[wrap_entry]
-		self.wrap_brackets(0)
+        self.brackets = self._brackets[wrap_entry]
+        self.wrap_brackets(0)
 
 
 class SwapBracketsCommand(sublime_plugin.TextCommand):
-	"""Swap bracket command."""
+    """Swap bracket command."""
 
-	def finalize(self, callback):
-		"""Execute post wrap callback."""
+    def finalize(self, callback):
+        """Execute post wrap callback."""
 
-		if self.view is not None:
-			if not self.view.settings().get("bracket_highlighter.busy", False):
-				callback()
-			else:
-				sublime.set_timeout(lambda: self.finalize(callback), 100)
+        if self.view is not None:
+            if not self.view.settings().get("bracket_highlighter.busy", False):
+                callback()
+            else:
+                sublime.set_timeout(lambda: self.finalize(callback), 100)
 
-	def swap_brackets(self, value):
-		"""Swap the brackets."""
+    def swap_brackets(self, value):
+        """Swap the brackets."""
 
-		if value < 0:
-			return
+        if value < 0:
+            return
 
-		self.brackets = self.wrap._brackets[value]
+        self.brackets = self.wrap._brackets[value]
 
-		self.view.run_command(
-			"bh_async_key" if self._async else "bh_key",
-			{
-				"plugin": {
-					"type": ["__all__"],
-					"command": "bh_modules.swapbrackets"
-				}
-			}
-		)
+        self.view.run_command(
+            "bh_async_key" if self._async else "bh_key",
+            {
+                "plugin": {
+                    "type": ["__all__"],
+                    "command": "bh_modules.swapbrackets"
+                }
+            }
+        )
 
-		self.view = self.window.active_view()
+        self.view = self.window.active_view()
 
-		if self._async:
-			sublime.set_timeout(lambda: self.finalize(lambda: self.wrap.wrap(value)), 100)
-		else:
-			self.finalize(self.wrap.wrap(value))
+        if self._async:
+            sublime.set_timeout(lambda: self.finalize(lambda: self.wrap.wrap(value)), 100)
+        else:
+            self.finalize(self.wrap.wrap(value))
 
-	def run(self, edit, **kwargs):
-		"""Initiate the swap."""
+    def run(self, edit, **kwargs):
+        """Initiate the swap."""
 
-		self._async = kwargs.get('async', False)
-		self.window = self.view.window()
-		self.wrap = SwapBrackets(self.view, "BracketHighlighter_swapping.sublime-settings", "swapping")
+        self._async = kwargs.get('async', False)
+        self.window = self.view.window()
+        self.wrap = SwapBrackets(self.view, "BracketHighlighter_swapping.sublime-settings", "swapping")
 
-		if len(self.wrap._menu):
-			self.window.show_quick_panel(
-				self.wrap._menu,
-				self.swap_brackets
-			)
+        if len(self.wrap._menu):
+            self.window.show_quick_panel(
+                self.wrap._menu,
+                self.swap_brackets
+            )
 
-	def is_enabled(self, **kwargs):
-		"""Check if command is enabled."""
+    def is_enabled(self, **kwargs):
+        """Check if command is enabled."""
 
-		settings = self.view.settings()
-		return bool(
-			not settings.get('bracket_highlighter.ignore', False) and
-			(
-				not settings.get('is_widget') or
-				sublime.load_settings("BracketHighlighter.sublime-settings").get('search_in_widgets', False)
-			)
-		)
+        settings = self.view.settings()
+        return bool(
+            not settings.get('bracket_highlighter.ignore', False) and
+            (
+                not settings.get('is_widget') or
+                sublime.load_settings("BracketHighlighter.sublime-settings").get('search_in_widgets', False)
+            )
+        )

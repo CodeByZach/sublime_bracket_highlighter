@@ -9,5 +9,5 @@ lowercase = import_module("bh_modules.lowercase")
 
 
 def validate(*args):
-	"""Check if bracket is lowercase."""
-	return lowercase.validate(*args)
+    """Check if bracket is lowercase."""
+    return lowercase.validate(*args)

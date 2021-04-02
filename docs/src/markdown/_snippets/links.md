@@ -1,6 +1,6 @@
 [aprosopo]: https://github.com/facelessuser/Aprosopo
 [backrefs]: http://facelessuser.github.io/backrefs/
-[keymap]: https://github.com/facelessuser/BracketHighlighter/blob/master/Default.sublime-keymap
+[keymap]: https://github.com/CodeByZach/sublime_bracket_highlighter/blob/master/Default.sublime-keymap
 [mkdocs]: http://www.mkdocs.org
 [mkdocs-material]: https://github.com/squidfunk/mkdocs-material
 [regreplace]: https://github.com/facelessuser/RegReplace
@@ -8,4 +8,4 @@
 [package-control-install]: https://packagecontrol.io/installation
 [pymdown-extensions]: https://github.com/facelessuser/pymdown-extensions
 [scopes]: http://facelessuser.github.io/sublime-markdown-popups/textmate_scopes/
-[template]: https://github.com/facelessuser/BracketHighlighter/blob/master/.github/ISSUE_TEMPLATE.md
+[template]: https://github.com/CodeByZach/sublime_bracket_highlighter/blob/master/.github/ISSUE_TEMPLATE.md

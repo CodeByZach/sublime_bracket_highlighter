@@ -1,6 +1,6 @@
 Please read and fill out this template by replacing the instructions with appropriate information.  If the template is not followed, the issue will be marked `Invalid` and closed.
 
-Before submitting an issue search past issues and read the area of the [documentation](http://facelessuser.github.io/BracketHighlighter/) related to your specific question, issue, or request.
+Before submitting an issue search past issues and read the area of the [documentation](http://codebyzach.github.io/sublime_bracket_highlighter/) related to your specific question, issue, or request.
 
 ---
 

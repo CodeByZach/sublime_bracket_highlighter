@@ -8,13 +8,13 @@ import sublime
 
 
 def log(msg):
-	"""Standard log."""
+    """Standard log."""
 
-	print("BracketHighlighter: %s" % msg)
+    print("BracketHighlighter: %s" % msg)
 
 
 def debug(msg):
-	"""Debug log."""
+    """Debug log."""
 
-	if sublime.load_settings("BracketHighlighter.sublime-settings").get('debug_enable', False):
-		log(msg)
+    if sublime.load_settings("BracketHighlighter.sublime-settings").get('debug_enable', False):
+        log(msg)

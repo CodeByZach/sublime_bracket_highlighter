@@ -37,7 +37,7 @@ For those who want to install BH without package control, here are the steps.  I
 
 2. Download and unpack, or git clone, the latest BracketHighlighter release and unpack as `BracketHighlighter`:
 
-    - https://github.com/facelessuser/BracketHighlighter -> BracketHighlighter
+    - https://github.com/CodeByZach/sublime_bracket_highlighter -> BracketHighlighter
 
 3. Create a folder under `Packages` called `00-dependencies` and under that folder create a file called `00-dependencies.py`:
 
@@ -212,7 +212,7 @@ For those who want to install BH without package control, here are the steps.  I
 
     ```
     cd /path/to/Sublime Text 3/Packages
-    git clone https://github.com/facelessuser/BracketHighlighter.git BracketHighlighter
+    git clone https://github.com/CodeByZach/sublime_bracket_highlighter.git BracketHighlighter
     ```
 
 3. Restart Sublime Text.

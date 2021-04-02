@@ -18,7 +18,7 @@ or you will have matching conflicts:
 ```
 
 BracketHighlighter also contains a number  
-of extensions that allows for deleting, replacing, or even wrapping brackets; check out the [documentation](http://facelessuser.github.io/BracketHighlighter/usage/) to learn  
+of extensions that allows for deleting, replacing, or even wrapping brackets; check out the [documentation](https://codebyzach.github.io/sublime_bracket_highlighter/usage/) to learn  
 more about basic usage.
 
 BracketHighlighter (if you are on the latest version of Sublime Text 3) also will show a popup on screen if you mouse  
@@ -32,7 +32,7 @@ lines and allow you to jump to the offscreen bracket.
 BracketHighlighter excludes plain text by default. The free form nature of plain text and lack of syntax highlight  
 scoping makes it more difficult to detect intended brackets.
 
-Some language might not be supported yet, but they can be added via pull requests.  Check out the [documentation](http://facelessuser.github.io/BracketHighlighter/customize/#configuring-brackets) to  
+Some language might not be supported yet, but they can be added via pull requests.  Check out the [documentation](https://codebyzach.github.io/sublime_bracket_highlighter/customize/#configuring-brackets) to  
 learn about adding bracket rules and take a look at the default [settings file](sub://Packages/BracketHighlighter/BracketHighlighter.sublime-settings) to see examples.
 
 # My Language Isn't Supported
@@ -53,7 +53,7 @@ encourage the issue creator to do the actual testing as they will be more famili
 # Customizing
 
 BracketHighlighter can be tweaked to show specific brackets with specific colors and styles. Due to the way sublime  
-handles colored regions, the method of specifying specific colors can be cumbersome, but it is all [documented](http://facelessuser.github.io/BracketHighlighter/customize/#configuring-highlight-style).
+handles colored regions, the method of specifying specific colors can be cumbersome, but it is all [documented](https://codebyzach.github.io/sublime_bracket_highlighter/customize/#configuring-highlight-style).
 
 # Sometimes I See a Question Mark
 
@@ -69,6 +69,6 @@ in the settings file.  Be mindful that extremely large thresholds may affect per
 # I Need Help!
 
 That's okay.  Bugs are sometimes introduced or discovered in existing code.  Sometimes the documentation isn't clear.  
-Support can be found over on the [official repo](https://github.com/facelessuser/BracketHighlighter/issues).  Make sure to first search the documentation and previous issues  
+Support can be found over on the [official repo](https://github.com/CodeByZach/sublime_bracket_highlighter/issues).  Make sure to first search the documentation and previous issues  
 before opening a new issue.  And when creating a new issue, make sure to fill in the provided issue template.  Please  
 be courteous and kind in your interactions.
