@@ -726,7 +726,8 @@ class BhToggleStringEscapeModeCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         """Perform string escape toggling."""
 
-        default_mode = sublime.load_settings("BracketHighlighter.sublime-settings").get('bracket_string_escape_mode', 'string')
+        default_mode = sublime.load_settings("BracketHighlighter.sublime-settings").get('bracket_string_escape_mode',
+            'string')
         if self.view.settings().get('bracket_highlighter.bracket_string_escape_mode', default_mode) == "regex":
             self.view.settings().set('bracket_highlighter.bracket_string_escape_mode', "string")
             sublime.status_message("Bracket String Escape Mode: string")
