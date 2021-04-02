@@ -94,3 +94,7 @@ unneeded
 versa
 whitelist
 whitespace
+basename
+dirname
+os
+kwargs

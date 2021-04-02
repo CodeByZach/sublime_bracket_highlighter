@@ -313,7 +313,8 @@ class BhRegion(object):
         else:
             self.save_normal_regions(left, right, bracket, lines)
 
-        if sublime.load_settings("BracketHighlighter.sublime-settings").get("content_highlight_bar", False) and lines > 1:
+        if sublime.load_settings("BracketHighlighter.sublime-settings").get("content_highlight_bar",
+            False) and lines > 1:
             self.save_content_regions(left, right, bracket, lines)
 
         begin_region = None if left is None else (left.begin, left.end)
