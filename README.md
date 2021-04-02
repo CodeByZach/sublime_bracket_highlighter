@@ -4,11 +4,15 @@
 [![Package Control][pc-image]][pc-link]
 [![License][license-image]][license-link]
 
-Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `<tag></tag>`, and even custom brackets.
+Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `<tag></tag>`, and even custom
+brackets.
 
-This was originally forked from pyparadigm's _SublimeBrackets_ and _SublimeTagmatcher_ (both are no longer available).  I forked this to fix some issues I had and to add some features I had wanted.  I also wanted to improve the efficiency of the matching.
+This was originally forked from pyparadigm's _SublimeBrackets_ and _SublimeTagmatcher_ (both are no longer available). I
+forked this to fix some issues I had and to add some features I had wanted.  I also wanted to improve the efficiency of
+the matching.
 
-Moving forward, I have thrown away all of the code and have completely rewritten the entire code base to allow for a more flexibility, faster, and more feature rich experience.
+Moving forward, I have thrown away all of the code and have completely rewritten the entire code base to allow for a
+more flexibility, faster, and more feature rich experience.
 
 ![screenshot](docs/src/markdown/images/Example1.png)
 
@@ -24,7 +28,10 @@ Moving forward, I have thrown away all of the code and have completely rewritten
 - Works with multi-select.
 - Configurable custom gutter icons.
 - Toggle bracket escape mode for string brackets (regex|string).
-- Bracket plugins that can jump between bracket ends, select content, remove brackets and/or content, wrap selections with brackets, swap brackets, swap quotes (handling quote escaping between the main quotes), fold/unfold content between brackets, toggle through tag attribute selection, select both the opening and closing tag name to change both simultaneously.
+- Bracket plugins that can jump between bracket ends, select content, remove brackets and/or content, wrap selections
+  with brackets, swap brackets, swap quotes (handling quote escaping between the main quotes), fold/unfold content
+  between brackets, toggle through tag attribute selection, select both the opening and closing tag name to change both
+  simultaneously, etc.
 
 # Documentation
 
