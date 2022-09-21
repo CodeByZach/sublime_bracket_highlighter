@@ -1,5 +1,14 @@
 # BracketHighlighter
 
+## 2.30.0
+
+- **NEW**: When defining key bindings `type` is now defaulted to `['__all__']` if not set.
+- **FIX**: Ensure Jinja2 support for works for the Jinja2 package (support existed for some older package).
+
+## 2.29.4
+
+- **FIX**: Fix for "Ruby on Rails" embedded in HTML 4130+.
+
 ## 2.29.3
 
 - **FIX**: Fix "Ruby on Rails" for Sublime build 4130+.
