@@ -6,104 +6,225 @@
         "children":
         [
             {
-                "id": "packages",
                 "caption": "Packages",
+                "id": "packages",
                 "children":
                 [
                     {
                         "caption": "BracketHighlighter",
                         "children":
                         [
-                            { "caption": "BracketHighlighter: Toggle Global Enable", "command": "bh_toggle_enable" }, // Toggle Global Enable
+                            // Toggle Global Enable
+                            {
+                                "caption": "BracketHighlighter: Toggle Global Enable",
+                                "command": "bh_toggle_enable"
+                            },
+
                             { "caption": "-" },
-                            { "caption": "Match Brackets (ignore threshold)", "command": "bh_key", "args": {"lines" : true} }, // Search to end of file for bracket
-                            { "caption": "Remove Brackets", "command": "bh_remove_brackets" }, // Remove brackets
+
+                            // Search to end of file for bracket
+                            {
+                                "caption": "Match Brackets (ignore threshold)",
+                                "command": "bh_key",
+                                "args": { "lines" : true }
+                            },
+
+                            // Remove brackets
+                            {
+                                "caption": "Remove Brackets",
+                                "command": "bh_remove_brackets"
+                            },
 
                             // Go to left bracket
-                            { "caption": "Jump to Left Bracket", "command": "bh_key",
+                            {
+                                "caption": "Jump to Left Bracket",
+                                "command": "bh_key",
                                 "args":
                                 {
                                     "no_outside_adj": null,
                                     "no_block_mode": null,
                                     "lines" : true,
-                                    "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"select": "left"} }
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.bracketselect",
+                                        "type": ["__all__"],
+                                        "args": { "select": "left" }
+                                    }
                                 }
                             },
 
                             // Go to right bracket
-                            { "caption": "Jump to Right Bracket", "command": "bh_key",
+                            {
+                                "caption": "Jump to Right Bracket",
+                                "command": "bh_key",
                                 "args":
                                 {
                                     "no_outside_adj": null,
                                     "no_block_mode": null,
                                     "lines" : true,
-                                    "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"select": "right"} }
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.bracketselect",
+                                        "type": ["__all__"],
+                                        "args": { "select": "right" }
+                                    }
                                 }
                             },
 
                             // Select text between brackets
-                            { "caption": "Select Bracket Content", "command": "bh_key",
+                            {
+                                "caption": "Select Bracket Content",
+                                "command": "bh_key",
                                 "args":
                                 {
                                     "no_outside_adj": null,
                                     "lines" : true,
-                                    "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect" }
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.bracketselect",
+                                        "type": ["__all__"]
+                                    }
                                 }
                             },
 
                             // Select text including brackets
-                            { "caption": "Select Bracket Content with Brackets", "command": "bh_key",
+                            {
+                                "caption": "Select Bracket Content with Brackets",
+                                "command": "bh_key",
                                 "args":
                                 {
                                     "no_outside_adj": null,
                                     "lines" : true,
-                                    "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"always_include_brackets": true} }
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.bracketselect",
+                                        "type": ["__all__"],
+                                        "args": { "always_include_brackets": true }
+                                    }
                                 }
                             },
 
                             // Fold contents between brackets
-                            { "caption": "Fold Bracket Content", "command": "bh_key",
-                                "args": { "plugin": { "type": ["__all__"], "command" : "bh_modules.foldbracket" } }
+                            {
+                                "caption": "Fold Bracket Content",
+                                "command": "bh_key",
+                                "args":
+                                {
+                                    "plugin":
+                                    {
+                                        "command" : "bh_modules.foldbracket",
+                                        "type": ["__all__"]
+                                    }
+                                }
                             },
 
                             { "caption": "-" },
-                            { "caption": "Toggle String Bracket Escape Mode", "command": "bh_toggle_string_escape_mode" }, // Toggle between string and regex escape mode for string brackets
-                            { "caption": "Toggle High Visibility Mode", "command": "bh_toggle_high_visibility" }, // Toggle high visibility mode
+
+                            // Toggle between string and regex escape mode for string brackets
+                            {
+                                "caption": "Toggle String Bracket Escape Mode",
+                                "command": "bh_toggle_string_escape_mode"
+                            },
+
+                            // Toggle high visibility mode
+                            {
+                                "caption": "Toggle High Visibility Mode",
+                                "command": "bh_toggle_high_visibility"
+                            },
+
                             { "caption": "-" },
 
                             // Select tag name of HTML/XML tag (both opening name and closing)
-                            { "caption": "Select Tag Name (closing and opening)", "command": "bh_key",
-                                "args": { "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect" } }
+                            {
+                                "caption": "Select Tag Name (closing and opening)",
+                                "command": "bh_key",
+                                "args":
+                                {
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.tagnameselect",
+                                        "type": ["cfml", "html", "angle"]
+                                    }
+                                }
                             },
 
                             // Select the attribute to the right of the cursor (will wrap inside the tag)
-                            { "caption": "Select Next Attribute (right)", "command": "bh_key",
-                                "args": { "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "right"} } }
+                            {
+                                "caption": "Select Next Attribute (right)",
+                                "command": "bh_key",
+                                "args":
+                                {
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.tagattrselect",
+                                        "type": ["cfml", "html", "angle"],
+                                        "args": { "direction": "right" }
+                                    }
+                                }
                             },
 
                             // Select the attribute to the left of the cursor (will wrap inside the tag)
-                            { "caption": "Select Next Attribute (left)", "command": "bh_key",
-                                "args": { "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "left"} } }
+                            {
+                                "caption": "Select Next Attribute (left)",
+                                "command": "bh_key",
+                                "args":
+                                {
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.tagattrselect",
+                                        "type": ["cfml", "html", "angle"],
+                                        "args": { "direction": "left" }
+                                    }
+                                }
                             },
 
                             { "caption": "-" },
 
                             // Convert single quote string to double quoted string and vice versa
                             // Will handle escaping or unescaping quotes within the string
-                            { "caption": "Swap Quotes", "command": "bh_key",
+                            {
+                                "caption": "Swap Quotes",
+                                "command": "bh_key",
                                 "args":
                                 {
                                     "lines" : true,
-                                    "plugin": { "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"], "command": "bh_modules.swapquotes" }
+                                    "plugin":
+                                    {
+                                        "command": "bh_modules.swapquotes",
+                                        "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"]
+                                    }
                                 }
                             },
 
-                            { "caption": "Swap Brackets", "command": "swap_brackets" }, // Swap brackets
-                            { "caption": "Wrap Selections with Brackets", "command": "wrap_brackets" }, // Surround selection with brackets from quick panel
-                            {"caption": "-"},
-                            { "caption": "Debug Mode", "command": "bh_debug" },
-                            { "caption": "Filter Rules by Key", "command": "bh_debug_rule", "args": {"filter_key": true} },
-                            { "caption": "Show Merged Rules", "command": "bh_debug_rule" }
+                            // Swap brackets
+                            {
+                                "caption": "Swap Brackets",
+                                "command": "swap_brackets"
+                            },
+
+                            // Surround selection with brackets from quick panel
+                            {
+                                "caption": "Wrap Selections with Brackets",
+                                "command": "wrap_brackets"
+                            },
+
+                            { "caption": "-" },
+
+                            {
+                                "caption": "Debug Mode",
+                                "command": "bh_debug"
+                            },
+
+                            {
+                                "caption": "Filter Rules by Key",
+                                "command": "bh_debug_rule",
+                                "args": { "filter_key": true }
+                            },
+
+                            {
+                                "caption": "Show Merged Rules",
+                                "command": "bh_debug_rule"
+                            }
                         ]
                     }
                 ]
@@ -165,7 +286,7 @@
                             { "caption": "-" },
                             {
                                 "caption": "Key Bindings",
-                                "command": "edit_settings",
+                                "command": "z_edit_settings",
                                 "args":
                                 {
                                     "base_file": "${packages}/BracketHighlighter/Default.sublime-keymap",
@@ -183,28 +304,7 @@
                                         "command": "z_edit_settings",
                                         "args":
                                         {
-                                            "is_parent_setting": "1",
                                             "base_file": "${packages}/BracketHighlighter/Context.sublime-menu",
-                                            "default": "[\n\t$0\n]\n"
-                                        }
-                                    },
-                                    {
-                                        "caption": "Side Bar Menu",
-                                        "command": "z_edit_settings",
-                                        "args":
-                                        {
-                                            "is_parent_setting": "1",
-                                            "base_file": "${packages}/BracketHighlighter/Side Bar.sublime-menu",
-                                            "default": "[\n\t$0\n]\n"
-                                        }
-                                    },
-                                    {
-                                        "caption": "Tab Menu",
-                                        "command": "z_edit_settings",
-                                        "args":
-                                        {
-                                            "is_parent_setting": "1",
-                                            "base_file": "${packages}/BracketHighlighter/Tab Context.sublime-menu",
                                             "default": "[\n\t$0\n]\n"
                                         }
                                     },
@@ -213,8 +313,43 @@
                                         "command": "z_edit_settings",
                                         "args":
                                         {
-                                            "is_parent_setting": "1",
                                             "base_file": "${packages}/BracketHighlighter/Main.sublime-menu",
+                                            "default": "[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Side Bar Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "base_file": "${packages}/BracketHighlighter/Side Bar.sublime-menu",
+                                            "default": "[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Side Bar Open Files Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "base_file": "${packages}/BracketHighlighter/Tab Sidebar Context.sublime-menu",
+                                            "default": "[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Tab Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "base_file": "${packages}/BracketHighlighter/Tab Context.sublime-menu",
+                                            "default": "[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Widget Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "base_file": "${packages}/BracketHighlighter/Widget Context.sublime-menu",
                                             "default": "[\n\t$0\n]\n"
                                         }
                                     }
@@ -225,7 +360,6 @@
                                 "command": "z_edit_settings",
                                 "args":
                                 {
-                                    "is_parent_setting": "1",
                                     "base_file": "${packages}/BracketHighlighter/Default.sublime-commands",
                                     "default": "[\n\t$0\n]\n"
                                 }

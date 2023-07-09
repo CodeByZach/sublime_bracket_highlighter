@@ -12,24 +12,22 @@
  *      {
  *          "keys": ["ctrl+alt+super+b"],
  *          "command": "bh_key",
- *          "args": {
- *              "lines" : true
- *          }
+ *          "args": { "lines" : true }
  *      },
  *
  *      // Go to left bracket
  *      {
  *          "keys": ["ctrl+alt+super+up"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "no_block_mode": null,
  *              "lines" : true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
- *                      "select": "left"
- *                  }
+ *                  "args": { "select": "left" }
  *              }
  *          }
  *      },
@@ -38,15 +36,15 @@
  *      {
  *          "keys": ["ctrl+alt+super+down"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "no_block_mode": null,
  *              "lines" : true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
- *                      "select": "right"
- *                  }
+ *                  "args": { "select": "right" }
  *              }
  *          }
  *      },
@@ -55,13 +53,16 @@
  *      {
  *          "keys": ["ctrl+alt+shift+super+up"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "no_block_mode": null,
  *              "lines" : true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
+ *                  "args":
+ *                  {
  *                      "select": "left",
  *                      "extend": true
  *                  }
@@ -73,13 +74,16 @@
  *      {
  *          "keys": ["ctrl+alt+shift+super+down"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "no_block_mode": null,
  *              "lines" : true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
+ *                  "args":
+ *                  {
  *                      "select": "right",
  *                      "extend": true
  *                  }
@@ -103,12 +107,15 @@
  *      {
  *          "keys": ["ctrl+m"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "lines": true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
+ *                  "args":
+ *                  {
  *                      "select": "right",
  *                      "alternate": true
  *                  }
@@ -120,12 +127,11 @@
  *      {
  *          "keys": ["ctrl+alt+super+s"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "lines" : true,
- *              "plugin": {
- *                  "command": "bh_modules.bracketselect"
- *              }
+ *              "plugin": { "command": "bh_modules.bracketselect" }
  *          }
  *      },
  *
@@ -133,14 +139,14 @@
  *      {
  *          "keys": ["ctrl+alt+super+d"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "no_outside_adj": null,
  *              "lines" : true,
- *              "plugin": {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.bracketselect",
- *                  "args": {
- *                      "always_include_brackets": true
- *                  }
+ *                  "args": { "always_include_brackets": true }
  *              }
  *          }
  *      },
@@ -149,10 +155,12 @@
  *      {
  *          "keys": ["ctrl+alt+super+t"],
  *          "command": "bh_key",
- *          "args": {
- *              "plugin": {
- *                  "type": ["cfml", "html", "angle"],
- *                  "command": "bh_modules.tagnameselect"
+ *          "args":
+ *          {
+ *              "plugin":
+ *              {
+ *                  "command": "bh_modules.tagnameselect",
+ *                  "type": ["cfml", "html", "angle"]
  *              }
  *          }
  *      },
@@ -161,13 +169,13 @@
  *      {
  *          "keys": ["ctrl+alt+super+right"],
  *          "command": "bh_key",
- *          "args": {
- *              "plugin": {
- *                  "type": ["cfml", "html", "angle"],
+ *          "args":
+ *          {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.tagattrselect",
- *                  "args": {
- *                      "direction": "right"
- *                  }
+ *                  "type": ["cfml", "html", "angle"],
+ *                  "args": { "direction": "right" }
  *              }
  *          }
  *      },
@@ -176,13 +184,13 @@
  *      {
  *          "keys": ["ctrl+alt+super+left"],
  *          "command": "bh_key",
- *          "args": {
- *              "plugin": {
- *                  "type": ["cfml", "html", "angle"],
+ *          "args":
+ *          {
+ *              "plugin":
+ *              {
  *                  "command": "bh_modules.tagattrselect",
- *                  "args": {
- *                      "direction": "left"
- *                  }
+ *                  "type": ["cfml", "html", "angle"],
+ *                  "args": { "direction": "left" }
  *              }
  *          }
  *      },
@@ -191,11 +199,13 @@
  *      {
  *          "keys": ["ctrl+alt+super+q"],
  *          "command": "bh_key",
- *          "args": {
+ *          "args":
+ *          {
  *              "lines" : true,
- *              "plugin": {
- *                  "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
- *                  "command": "bh_modules.swapquotes"
+ *              "plugin":
+ *              {
+ *                  "command": "bh_modules.swapquotes",
+ *                  "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"]
  *              }
  *          }
  *      },
@@ -204,10 +214,9 @@
  *      {
  *          "keys": ["ctrl+alt+super+["],
  *          "command": "bh_key",
- *          "args": {
- *              "plugin": {
- *                  "command" : "bh_modules.foldbracket"
- *              }
+ *          "args":
+ *          {
+ *              "plugin": { "command": "bh_modules.foldbracket" }
  *          }
  *      },
  *
@@ -235,7 +244,8 @@
     {
         "keys": ["tab"],
         "command": "bh_next_wrap_sel",
-        "context": [
+        "context":
+        [
             {
                 "operand": true,
                 "operator": "equal",

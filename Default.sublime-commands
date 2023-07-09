@@ -9,67 +9,91 @@
     { "caption": "BracketHighlighter: Toggle Global Enable", "command": "bh_toggle_enable" },
 
     // Search to end of file for bracket
-    { "caption": "BracketHighlighter: Match Brackets (ignore threshold)", "command": "bh_async_key",
-        "args":
-        {
-            "lines" : true
-        }
-    },
+    { "caption": "BracketHighlighter: Match Brackets (ignore threshold)", "command": "bh_async_key", "args": { "lines" : true } },
 
     // Remove brackets
     { "caption": "BracketHighlighter: Remove Brackets", "command": "bh_remove_brackets" },
 
     // Go to left bracket
-    { "caption": "BracketHighlighter: Jump to Left Bracket", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Jump to Left Bracket",
+        "command": "bh_async_key",
         "args":
         {
             "no_outside_adj": null,
             "no_block_mode": null,
             "lines" : true,
-            "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "left" } }
+            "plugin":
+            {
+                "command": "bh_modules.bracketselect",
+                "type": ["__all__"],
+                "args": { "select": "left" }
+            }
         }
     },
 
     // Go to right bracket
-    { "caption": "BracketHighlighter: Jump to Right Bracket", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Jump to Right Bracket",
+        "command": "bh_async_key",
         "args":
         {
             "no_outside_adj": null,
             "no_block_mode": null,
             "lines" : true,
-            "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "right" } }
+            "plugin":
+            {
+                "command": "bh_modules.bracketselect",
+                "type": ["__all__"],
+                "args": { "select": "right" }
+            }
         }
     },
 
     // Select text between brackets
-    { "caption": "BracketHighlighter: Select Bracket Content", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Select Bracket Content",
+        "command": "bh_async_key",
         "args":
         {
             "no_outside_adj": null,
             "lines" : true,
-            "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect" }
+            "plugin":
+            {
+                "command": "bh_modules.bracketselect",
+                "type": ["__all__"]
+            }
         }
     },
 
     // Select text including brackets
-    { "caption": "BracketHighlighter: Select Bracket Content with Brackets", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Select Bracket Content with Brackets",
+        "command": "bh_async_key",
         "args":
         {
             "no_outside_adj": null,
             "lines" : true,
-            "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect",
-                "args":
-                {
-                    "always_include_brackets": true
-                }
+            "plugin":
+            {
+                "command": "bh_modules.bracketselect",
+                "type": ["__all__"],
+                "args": { "always_include_brackets": true }
             }
         }
     },
 
     // Fold contents between brackets
-    { "caption": "BracketHighlighter: Fold Bracket Content", "command": "bh_async_key",
-        "args": {
-            "plugin": { "type": ["__all__"], "command" : "bh_modules.foldbracket" }
+    {
+        "caption": "BracketHighlighter: Fold Bracket Content",
+        "command": "bh_async_key",
+        "args":
+        {
+            "plugin":
+            {
+                "command" : "bh_modules.foldbracket",
+                "type": ["__all__"]
+            }
         }
     },
 
@@ -84,52 +108,75 @@
     { "caption": "-" },
 
     // Select tag name of HTML/XML tag (both opening name and closing)
-    { "caption": "BracketHighlighter: Select Tag Name (closing and opening)", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Select Tag Name (closing and opening)",
+        "command": "bh_async_key",
         "args":
         {
-            "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect" }
+            "plugin":
+            {
+                "command": "bh_modules.tagnameselect",
+                "type": ["cfml", "html", "angle"]
+            }
         }
     },
 
     // Select the attribute to the right of the cursor (will wrap inside the tag)
-    { "caption": "BracketHighlighter: Select Next Attribute (right)", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Select Next Attribute (right)",
+        "command": "bh_async_key",
         "args":
         {
-            "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": { "direction": "right" } }
+            "plugin":
+            {
+                "command": "bh_modules.tagattrselect",
+                "type": ["cfml", "html", "angle"],
+                "args": { "direction": "right" }
+            }
         }
     },
 
     // Select the attribute to the left of the cursor (will wrap inside the tag)
-    { "caption": "BracketHighlighter: Select Next Attribute (left)", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Select Next Attribute (left)",
+        "command": "bh_async_key",
         "args":
         {
-            "plugin": { "type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": { "direction": "left" } }
+            "plugin":
+            {
+                "command": "bh_modules.tagattrselect",
+                "type": ["cfml", "html", "angle"],
+                "args": { "direction": "left" }
+            }
         }
     },
 
     // Convert single quote string to double quoted string and vice versa. Will handle escaping or unescaping quotes within the string.
-    { "caption": "BracketHighlighter: Swap Quotes", "command": "bh_async_key",
+    {
+        "caption": "BracketHighlighter: Swap Quotes",
+        "command": "bh_async_key",
         "args":
         {
             "lines" : true,
-            "plugin": { "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"], "command": "bh_modules.swapquotes" }
+            "plugin":
+            {
+                "command": "bh_modules.swapquotes",
+                "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"]
+            }
         }
     },
 
     // Swap Brackets
-    { "caption": "BracketHighlighter: Swap Brackets", "command": "swap_brackets",
-        "args":
-        {
-            "async": true
-        }
-    },
+    { "caption": "BracketHighlighter: Swap Brackets", "command": "swap_brackets", "args": { "async": true } },
 
     // Surround selection with brackets from quick panel
     { "caption": "BracketHighlighter: Wrap Selections with Brackets", "command": "wrap_brackets" },
 
     { "caption": "BracketHighlighter: Find Matching Offscreen Bracket", "command": "bh_offscreen_popup" },
 
-    { "caption": "BracketHighlighter: Settings", "command": "edit_settings",
+    {
+        "caption": "BracketHighlighter: Settings",
+        "command": "edit_settings",
         "args":
         {
             "base_file": "${packages}/BracketHighlighter/BracketHighlighter.sublime-settings",
@@ -137,7 +184,9 @@
         }
     },
 
-    { "caption": "BracketHighlighter: Tag Settings", "command": "edit_settings",
+    {
+        "caption": "BracketHighlighter: Tag Settings",
+        "command": "edit_settings",
         "args":
         {
             "base_file": "${packages}/BracketHighlighter/BracketHighlighter_tag.sublime-settings",
@@ -145,7 +194,9 @@
         }
     },
 
-    { "caption": "BracketHighlighter: Wrap Settings", "command": "edit_settings",
+    {
+        "caption": "BracketHighlighter: Wrap Settings",
+        "command": "edit_settings",
         "args":
         {
             "base_file": "${packages}/BracketHighlighter/BracketHighlighter_wrapping.sublime-settings",
@@ -153,7 +204,9 @@
         }
     },
 
-    { "caption": "BracketHighlighter: Swap Settings", "command": "edit_settings",
+    {
+        "caption": "BracketHighlighter: Swap Settings",
+        "command": "edit_settings",
         "args":
         {
             "base_file": "${packages}/BracketHighlighter/BracketHighlighter_swapping.sublime-settings",
