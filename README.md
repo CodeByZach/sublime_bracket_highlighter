@@ -4,7 +4,7 @@
 [![Package Control][pc-image]][pc-link]
 [![License][license-image]][license-link]
 
-Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `<tag></tag>`, and even custom
+BracketHighlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `<tag></tag>`, and even custom
 brackets.
 
 This was originally forked from pyparadigm's _SublimeBrackets_ and _SublimeTagmatcher_ (both are no longer available). I

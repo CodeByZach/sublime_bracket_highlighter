@@ -67,7 +67,7 @@
     "align_content_highlight_bar": false,
 
     /*
-     * Experimental: Allow bracket highlighter to search in widgets.
+     * Experimental: Allow BracketHighlighter to search in widgets.
      * Most widgets use Plain Text which BH should ignore, but regex find views are
      * usually regular expression which should be the only views to trigger BH.
      */
