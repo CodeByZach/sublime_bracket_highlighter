@@ -5,7 +5,7 @@ import textwrap
 import webbrowser
 import re
 
-__version__ = "2.31.4"
+__version__ = "2.32.1"
 __pc_name__ = 'BracketHighlighter'
 
 CSS = '''
@@ -100,19 +100,19 @@ class BracketHighlighterSupportInfoCommand(sublime_plugin.ApplicationCommand):
             info["backrefs_version"] = 'Version could not be acquired!'
 
         try:
-            import markdown
+            from mdpopups import markdown
             info["markdown_version"] = format_version(markdown, 'version')
         except Exception:
             info["markdown_version"] = 'Version could not be acquired!'
 
         try:
-            import jinja2
+            from mdpopups import jinja2
             info["jinja_version"] = format_version(jinja2, '__version__')
         except Exception:
             info["jinja_version"] = 'Version could not be acquired!'
 
         try:
-            import pygments
+            from mdpopups import pygments
             info["pygments_version"] = format_version(pygments, '__version__')
         except Exception:
             info["pygments_version"] = 'Version could not be acquired!'

@@ -1,5 +1,18 @@
 # BracketHighlighter
 
+## 2.32.1
+
+- **FIX**: Remove verbose parameter from named tubple which causes issues with Python 3.8.
+
+## 2.32.0
+
+- **NEW**: Opt in to Python 3.8.
+- **FIX**: Fix issues with "SINUMERIK840D" language.
+
+## 2.31.5
+
+- **FIX**: Fix endless Ruby method case.
+
 ## 2.31.4
 
 - **FIX**: Fix PHP arrow case that could break bracket highlighting.
