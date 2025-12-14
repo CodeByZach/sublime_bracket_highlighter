@@ -41,8 +41,8 @@ https://codebyzach.github.io/sublime_bracket_highlighter/
 
 This work is licensed under the [The MIT License](LICENSE).
 
-[github-ci-image]: https://github.com/CodeByZach/sublime_bracket_highlighter/workflows/build/badge.svg?branch=master&event=push
-[github-ci-link]: https://github.com/CodeByZach/sublime_bracket_highlighter/actions?query=workflow%3Abuild+branch%3Amaster
+[github-ci-image]: https://github.com/CodeByZach/sublime_bracket_highlighter/actions/workflows/build.yml/badge.svg?branch=master
+[github-ci-link]: https://github.com/CodeByZach/sublime_bracket_highlighter/actions/workflows/build.yml
 [pc-image]: https://img.shields.io/packagecontrol/dt/BracketHighlighter.svg?labelColor=333333&logo=sublime%20text
 [pc-link]: https://packagecontrol.io/packages/BracketHighlighter
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?labelColor=333333
