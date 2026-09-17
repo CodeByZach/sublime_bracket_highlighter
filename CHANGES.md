@@ -1,5 +1,9 @@
 # BracketHighlighter
 
+## 2.33.1
+
+-   **FIX**. Fix errors on latest Sublime version.
+
 ## 2.33.0
 
 -   **NEW**: Release special branch for Sublime Text 4201+.

@@ -33,7 +33,7 @@ HIGH_VISIBILITY = False
 ####################
 # Match Code
 ####################
-class BhCore(object):
+class BhCore:
     """Bracket matching class."""
 
     plugin_reload = False

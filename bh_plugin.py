@@ -144,7 +144,7 @@ class BracketPluginRunCommand(sublime_plugin.TextCommand):
             print("BracketHighlighter: Plugin Run Error:\n%s" % str(traceback.format_exc()))
 
 
-class BracketPlugin(object):
+class BracketPlugin:
     """Class for preparing and running plugins."""
 
     def __init__(self, plugin, loaded):
@@ -199,7 +199,7 @@ class BracketPlugin(object):
         return left, right, selection, nobracket, refresh_match
 
 
-class BracketPluginCommand(object):
+class BracketPluginCommand:
     """Bracket Plugin base class."""
 
     def run(self, bracket, content, selection):
