@@ -45,7 +45,7 @@ def exclude_entry(enabled, filter_type, language_list, language):
     return exclude
 
 
-class WrapInstance(object):
+class WrapInstance:
     """Track wrap instance globally."""
 
     obj = None
@@ -59,7 +59,7 @@ class WrapInstance(object):
         cls.value = None
 
 
-class TextInsertion(object):
+class TextInsertion:
     """Wrapper class for inserting text."""
 
     def __init__(self, view, edit):
@@ -97,7 +97,7 @@ class ExecuteWrapInstanceCommand(sublime_plugin.TextCommand):
         obj.select(edit)
 
 
-class WrapBrackets(object):
+class WrapBrackets:
     """Wrap the current selection(s) with the defined wrapping options."""
 
     def __init__(self, view, setting_file, attribute):
@@ -292,22 +292,18 @@ class WrapBrackets(object):
             self.wrap_brackets(0)
 
 
-class WrapBracketsCommand(sublime_plugin.TextCommand, WrapBrackets):
+class WrapBracketsCommand(sublime_plugin.TextCommand):
     """Bracket wrapping command."""
 
     def run(self, edit):
         """Display the wrapping menu."""
 
-        self._menu = []
-        self._brackets = []
-        self._insert = []
-        self._style = []
-        self.read_wrap_entries("BracketHighlighter_wrapping.sublime-settings", "wrapping")
+        self.wrap = WrapBrackets(self.view, "BracketHighlighter_wrapping.sublime-settings", "wrapping")
 
-        if len(self._menu):
+        if len(self.wrap._menu):
             self.view.window().show_quick_panel(
-                self._menu,
-                self.wrap_style
+                self.wrap._menu,
+                self.wrap.wrap_style
             )
 
     def is_enabled(self, **kwargs):

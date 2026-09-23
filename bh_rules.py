@@ -131,7 +131,7 @@ def is_valid_definition(params, language):
     )
 
 
-class BracketDefinition(object):
+class BracketDefinition:
     """Normal bracket definition."""
 
     def __init__(self, bracket):
@@ -151,7 +151,7 @@ class BracketDefinition(object):
         self.ignore_string_escape = bracket.get("ignore_string_escape", BH_IGNORE_STRING_ESCAPE)
 
 
-class ScopeDefinition(object):
+class ScopeDefinition:
     """Scope bracket definition."""
 
     def __init__(self, bracket):
@@ -178,7 +178,7 @@ class ScopeDefinition(object):
             self.enabled = False
 
 
-class SearchRules(object):
+class SearchRules:
     """Search rule object."""
 
     def __init__(self, brackets, scopes, string_escape_mode, outside_adj, block_cursor):

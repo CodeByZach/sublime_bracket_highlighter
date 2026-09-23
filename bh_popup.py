@@ -56,7 +56,7 @@ if HOVER_SUPPORT:
     import mdpopups
 
 
-class BhOffscreenPopup(object):
+class BhOffscreenPopup:
     """Handle offscreen popups."""
 
     popup_view = None
